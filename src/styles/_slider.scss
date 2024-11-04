@@ -1,0 +1,25 @@
+.slider {
+    grid-row: 2 / -1;
+
+    &__pic {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        height: 25rem;
+        width: 20rem;
+        border-radius: 3rem;
+        position: relative;
+
+        &--text {
+            position: absolute;
+            left: 15%;
+            bottom: 8%;
+            font-size: 1.3rem;
+            background: $color-primary-dark;
+            border-radius: .5rem;
+        }
+    }
+
+    &__heading {
+        margin-left: 1.5rem;
+    }
+}

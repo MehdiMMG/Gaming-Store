@@ -1,0 +1,191 @@
+.main {
+  display: grid;
+  grid-template-rows: 6vh 1fr;
+  grid-template-columns: full-start full-end;
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+
+    &__input {
+      font-family: inherit;
+      font-size: 1.5rem;
+      color: $color-white;
+      background-color: $color-primary;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 0.7rem;
+      width: 25vw;
+      transition: all 0.3s;
+      margin-right: -3.25rem;
+
+      &:focus {
+        outline: none;
+        width: 35vw;
+      }
+
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+
+    &__input:focus+&__button {
+      background-color: $color-primary;
+    }
+
+    &__button {
+      border: none;
+      background-color: $color-primary;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: translateX(2px);
+      }
+    }
+
+    &__logo {
+      fill: $color-white;
+      width: 2rem;
+      height: 2rem;
+      transform: translateY(5px);
+    }
+
+    .icons {
+      padding: 5px;
+
+      &__notif {
+        fill: $color-white;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: $color-primary-light;
+        border-radius: 50%;
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  .content {
+    margin: 1rem;
+    background-color: $color-primary-light;
+    background-image: linear-gradient(rgba($color-primary-light, 0.5),
+        rgba($color-primary-light, 0.5)),
+      url(../img/Mk1-Cover.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    .tags {
+      height: 10rem;
+      height: 10rem;
+
+      &__list {
+        list-style: none;
+        display: inline-block;
+        padding: 1.2rem;
+        height: 10rem;
+        height: 10rem;
+      }
+
+      &__link:link,
+      &__link:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.3rem;
+        border-radius: 1rem;
+        background-color: rgba($color-primary-light, 0.3);
+        transition: all 0.3s;
+      }
+    }
+
+    .details {
+      grid-row: 2 / 3;
+      align-self: center;
+      margin-left: 1rem;
+
+      &__title {
+        line-height: 2;
+        font-family: $font-display;
+        font-weight: 600;
+        font-size: 2rem;
+        color: $color-white;
+      }
+
+      &__paragraph {
+        font-family: $font-display;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+    }
+
+    .buy {
+      align-self: center;
+      justify-self: start;
+      grid-row: 2 / 3;
+      display: flex;
+      width: 100%;
+
+      &__link:link,
+      &__link:visited {
+        text-decoration: none;
+        background-color: $color-secondary;
+        border-radius: 1rem;
+        color: $color-white;
+        padding: 1rem;
+        width: 60%;
+        transition: all 0.3s;
+
+        // animation-name: change;
+        // animation-duration: 2s;
+        // animation-iteration-count: infinite;
+
+        &--text {}
+
+        &:hover {
+          @keyframes change {
+            0% {
+              background-color: $color-secondary;
+            }
+
+            100% {
+              background-color: $color-orange;
+            }
+          }
+        }
+      }
+
+      &__price {
+        display: inline-block;
+
+        &--crossed {
+          text-decoration: line-through;
+          margin-left: 1rem;
+        }
+      }
+
+      &__like {
+        position: absolute;
+        right: 10%;
+        align-self: center;
+        fill: $color-primary-light;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: rgba($color-primary-light, 0.25);
+        border-radius: 2rem;
+        transition: all 0.3s;
+
+        &:hover {
+          fill: $color-secondary;
+        }
+      }
+    }
+  }
+}

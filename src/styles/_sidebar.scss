@@ -1,0 +1,144 @@
+.sidebar {
+  background: linear-gradient($color-primary 75%, $color-secondary 100%);
+  grid-row: 1 / -1;
+  grid-column: sidebar-start sidebar-end;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+
+  .pic {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateX(1rem);
+    }
+
+    &__logo {
+      fill: $color-secondary;
+      font-size: 4rem;
+    }
+
+    &__heading-1 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-family: $font-display;
+      font-weight: 900;
+    }
+
+    &__heading-2 {
+      font-size: 1.5rem;
+      color: $color-secondary;
+      font-family: $font-display;
+      font-weight: 900;
+    }
+  }
+
+  &__items {
+    .nav {
+      &__list {
+        list-style: none;
+        padding: 1rem 0.5rem;
+      }
+
+      &__link:link,
+      &__link:visited {
+        text-decoration: none;
+        color: $color-grey-light-1;
+        font-size: 1.3rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-secondary;
+          border-radius: 1rem;
+        }
+
+        .logo {
+          fill: $color-grey-light-1;
+
+          &:hover {
+            fill: $color-primary;
+          }
+        }
+
+        span {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    .nav {
+      &__list {
+        list-style: none;
+        padding: 5px;
+      }
+
+      &__link:link,
+      &__link:visited {
+        text-decoration: none;
+        color: $color-grey-light-1;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+
+        .logo {
+          fill: $color-grey-light-1;
+        }
+
+        span {
+          padding: 1rem;
+        }
+
+        &:hover {
+          background-color: $color-secondary;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.discount {
+  background-color: $color-secondary;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  height: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+
+  &__heading {
+    font-family: $font-display;
+    font-size: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 4rem;
+    background-color: $color-primary-dark;
+    color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
