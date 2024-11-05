@@ -1,5 +1,10 @@
 .slider {
     grid-row: 2 / -1;
+    grid-column: sidebar-end / detail-start;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-column: sidebar-start / full-end;
+    }
 
     &__pic {
         margin-top: 3rem;

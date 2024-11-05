@@ -20,8 +20,8 @@ $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 // REPONSIVE BREAKPOINTS
-$bp-largest: 75em;  //1200px
-$bp-large: 62em;   //1000px
+$bp-largest: 75em; //1200px
+$bp-large: 62em; //1000px
 $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
 
@@ -54,6 +54,8 @@ body {
     // [sidebar-end full-start] minmax(6rem,1fr) 
     // [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
     // [center-end] minmax(6rem, 1fr)[full-end];
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: [sidebar-start] 15vw [sidebar-end full-start]  minmax(45vw, 1fr) [detail-start] 25vw [detail-end full-end];
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: [minsidebar-start] 7rem [minsidebar-end sidebar-start] 8rem [sidebar-end full-start] minmax(45vw, 1fr) [detail-start] 25vw [detail-end full-end];
+
+
 }

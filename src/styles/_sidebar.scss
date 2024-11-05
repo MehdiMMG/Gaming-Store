@@ -1,19 +1,27 @@
 .sidebar {
   background: linear-gradient($color-primary 75%, $color-secondary 100%);
+  grid-column: minsidebar-start / sidebar-end;
   grid-row: 1 / -1;
-  grid-column: sidebar-start sidebar-end;
-  height: 100vh;
+
+  @media only screen and (max-width:$bp-largest) {
+    grid-column: minsidebar-start / minsidebar-end;
+  }
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0 5px;
 
   .pic {
     display: flex;
     align-items: center;
     transition: all 0.3s;
     cursor: pointer;
+
+    @media only screen and (max-width:$bp-largest) {
+      display: block;
+      padding: .5rem;
+    }
 
     &:hover {
       transform: translateX(1rem);
@@ -29,6 +37,11 @@
       color: #fff;
       font-family: $font-display;
       font-weight: 900;
+
+      @media only screen and (max-width:$bp-largest) {
+        visibility: hidden;
+        opacity: 0;
+      }
     }
 
     &__heading-2 {
@@ -36,6 +49,11 @@
       color: $color-secondary;
       font-family: $font-display;
       font-weight: 900;
+
+      @media only screen and (max-width:$bp-largest) {
+        visibility: hidden;
+        opacity: 0;
+      }
     }
   }
 
@@ -53,21 +71,24 @@
         font-size: 1.3rem;
         transition: all 0.3s;
 
+        @media only screen and (max-width: $bp-largest) {
+          margin-left: 1.3rem;
+        }
+
         &:hover {
           color: $color-secondary;
           border-radius: 1rem;
         }
 
-        .logo {
-          fill: $color-grey-light-1;
 
-          &:hover {
-            fill: $color-primary;
-          }
-        }
 
         span {
           padding: 1rem;
+
+          @media only screen and (max-width:$bp-largest) {
+            visibility: hidden;
+            opacity: 0;
+          }
         }
       }
     }
@@ -87,17 +108,21 @@
         font-size: 1.5rem;
         transition: all 0.3s;
 
+        @media only screen and (max-width:$bp-largest) {
+          margin-left: 1.3rem;
+        }
+
         .logo {
           fill: $color-grey-light-1;
         }
 
         span {
           padding: 1rem;
-        }
 
-        &:hover {
-          background-color: $color-secondary;
-          border-radius: 1rem;
+          @media only screen and (max-width:$bp-largest) {
+            visibility: hidden;
+            opacity: 0;
+          }
         }
       }
     }
@@ -115,6 +140,11 @@
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem;
+
+  @media only screen and (max-width:$bp-largest) {
+    visibility: hidden;
+    opacity: 0;
+  }
 
   &__heading {
     font-family: $font-display;

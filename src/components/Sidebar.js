@@ -22,43 +22,43 @@ const Sidebar = () => {
         <ul className='nav'>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <AiFillHome className='nav__logo'></AiFillHome>
+              <AiFillHome className='nav__link--logo'></AiFillHome>
               <span>Home</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <TbCategory className='nav__logo'></TbCategory>
+              <TbCategory className='nav__link--logo'></TbCategory>
               <span>Category</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <FaBookBookmark className='nav__logo'></FaBookBookmark>
+              <FaBookBookmark className='nav__link--logo'></FaBookBookmark>
               <span>Library</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <HiOutlineHashtag className='nav__logo'></HiOutlineHashtag>
+              <HiOutlineHashtag className='nav__link--logo'></HiOutlineHashtag>
               <span>Community</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <FaUserFriends className='nav__logo'></FaUserFriends>
+              <FaUserFriends className='nav__link--logo'></FaUserFriends>
               <span>Freinds</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <FaRegHeart className='nav__logo'></FaRegHeart>
+              <FaRegHeart className='nav__link--logo'></FaRegHeart>
               <span>Wishlist</span>
             </a>
           </li>
           <li className='nav__list'>
             <a href='#' className='nav__link'>
-              <GoDownload className='nav__logo'></GoDownload>
+              <GoDownload className='nav__link--logo'></GoDownload>
               <span>Downloads</span>
             </a>
           </li>
