@@ -45,6 +45,7 @@ body {
     color: $color-grey-light-1;
     font-weight: 300;
     line-height: 1.6;
+    overflow: hidden;
 }
 
 .container {
@@ -56,6 +57,4 @@ body {
     // [center-end] minmax(6rem, 1fr)[full-end];
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: [minsidebar-start] 7rem [minsidebar-end sidebar-start] 8rem [sidebar-end full-start] minmax(45vw, 1fr) [detail-start] 25vw [detail-end full-end];
-
-
 }
